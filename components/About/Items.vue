@@ -4,6 +4,7 @@ const props = defineProps(['info'])
 
 <template>
 <div class="about-item">
+
   <h3>{{props.info.header}}</h3>
   <h5 class="sub">{{props.info.sub}}</h5>
   <p>{{props.info.text}}</p>

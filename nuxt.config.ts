@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   css: ["@/assets/css/main.css"],
   devtools: { enabled: true },
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/ui','nuxt-icon'],
   ui: {
-    primary: 'green',
+    primary: 'white',
     gray: 'cool'
   }
 })

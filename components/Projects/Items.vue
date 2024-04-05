@@ -5,7 +5,8 @@ const props = defineProps(['info'])
 <template>
 <div class="projects">
 
-
+<h3>{{props.info.project}}</h3>
+  <h3>{{props.info.year}}</h3>
 
   <p v-for="tech in props.info.technology"><-{{tech}}</p>
 
