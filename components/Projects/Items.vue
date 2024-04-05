@@ -3,10 +3,10 @@ const props = defineProps(['info'])
 </script>
 
 <template>
-<div class="edu">
-  <h3>{{props.info.project}}</h3>
+<div class="projects">
 
-  <h3>{{props.info.description}}</h3>
+
+
   <p v-for="tech in props.info.technology"><-{{tech}}</p>
 
 
@@ -15,9 +15,7 @@ const props = defineProps(['info'])
 </template>
 
 <style scoped>
-.edu {
+.projects{
 
-  align-content: center;
-  align-items: center;
 }
 </style>

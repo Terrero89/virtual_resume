@@ -49,7 +49,7 @@ const items = [
         </div>
 
 <UITabs/>
-<!--        <UISidebar/>-->
+
       </div>
     </UContainer>
   </div>
@@ -66,20 +66,8 @@ const items = [
 }
 }
 
-@media only screen and (min-width:768px){
-  .tabs{
-   display: none
-  }
-  .side{
 
-  }
-}
-@media only screen and (max-width:768px){
 
-  .side-vertical{
-display: none;
-  }
-}
 .main-wrapper {
 min-height: 90vh;
   background-color: #8f8f8f;
@@ -122,7 +110,7 @@ min-height: 90vh;
 
   width: 12rem;
   height: 12rem;
-  //border: solid #d9d9d9 1px;
+
   object-fit: contain;
   margin: 0 auto;
   background-position: center;
