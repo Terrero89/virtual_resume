@@ -3,7 +3,7 @@ const props = defineProps(['info'])
 </script>
 
 <template>
-<div>
+<div class="education">
   <h3> {{props.info.degree}}</h3>
   <h3>{{props.info.school}}</h3>
   <h3>{{props.info.year}}</h3>
@@ -14,5 +14,13 @@ const props = defineProps(['info'])
 </template>
 
 <style scoped>
+.education {
+  border: solid #f30000 1px;
+  min-width: 98%;
+  min-height:55rem;
+  border-radius:7px;
+  padding: 0.5rem;
 
+
+}
 </style>

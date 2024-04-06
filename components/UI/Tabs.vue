@@ -16,10 +16,7 @@ const tabs = ref([
     content: [{
       header: 'About me',
       sub: "Part of my story",
-      text: ' is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ' +
-          'industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of ' +
-          'type and scrambled it to make a type specimen book. It has survived not only five centuries, but ' +
-          'also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in ' +
+      text: ' also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in ' +
           'sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
     }]
   },
@@ -81,14 +78,16 @@ icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em
 <template>
   <div class="tabs-container vertical">
     <div class="tab-size">
-      <div v-for="(tab, index) in tabs" :key="index" @click="activateTab(index)"
+      <div v-for="(tab, index) in tabs"
+           :key="index"
+           @click="activateTab(index)"
            :class="{ 'active': activeTab === index }" class="tab">
         <img :src="tab.icon" class="tab-icon" v-if="tab.icon" alt="icon">
-        {{ tab.label }}
+     <h1>   {{ tab.label }}</h1>
       </div>
     </div>
 
-    <div v-if="activeTab !== null" class="tab-content">
+<!--    <div v-if="activeTab !== null" class="tab-content">-->
       <UCarousel v-slot="{ item, n }" :items="tabs[activeTab].content" :ui="{ item: 'basis-full' }"
                  class="rounded-lg cool" indicators draggable="true">
         <div class="content">
@@ -99,35 +98,13 @@ icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em
         </div>
       </UCarousel>
     </div>
-  </div>
+<!--  </div>-->
 </template>
 
 <style scoped>
-.tab-icon {
-margin: 0.4rem auto;
-  height:2rem;
-
-}
-
-.cool {
-  height: 70%;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.content {
-  margin: 0 auto;
-
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 15rem;
-}
-
 .tabs-container {
   width: 100%;
 }
-
 .tab-size {
   border-radius: 2px;
   display: flex;
@@ -136,6 +113,38 @@ margin: 0.4rem auto;
   width: 94%;
   margin: 0 auto;
 }
+
+
+.tab-icon {
+margin: 0.4rem auto;
+  height:2rem;
+
+}
+
+.tab h1 {
+
+}
+
+
+.cool {
+  height: 70%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  border: 1px solid green;
+  margin: 0 auto;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 15rem;
+}
+
+
+
+
 
 .tab {
   color: #cacaca;
@@ -148,12 +157,13 @@ margin: 0.4rem auto;
 }
 
 .tab:hover {
-  background-color: #c5c5c5;
+  background-color: rgba(255, 255, 255, 0.3);
   color: #61DBFB;
+  border-radius: 5px;
 }
 
 .tab.active {
-  background-color: #c5c5c5;
+  background-color: rgba(255, 255, 255, 0.3);
   opacity: 0.7;
   border-radius: 5px;
   color: #61DBFB;

@@ -16,11 +16,10 @@
 
 <style scoped>
 
+
 .header-section {
 
   padding: 2rem;
-  max-height: 20rem;
-
   background-position: center;
   object-fit: cover;
   background-repeat: no-repeat;
@@ -55,6 +54,24 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
   url("https://www.bostonintransit.com/cdn/shop/products/HistoricalMBTAMap-2022MediumPrint-web.jpg?v=1669156236");
 }
+@media only screen and (max-width:450px){
+  .img-container img {
+    border-radius: 50%;
+
+    width: 10rem;
+    height: 10rem;
+
+   margin: 1rem auto;
+  }
+
+  .header-text {
+    text-align: center;
+    width: 15rem;
+
+    margin: 1rem auto;
+  }
+}
+
 
 .header-text {
   text-align: center;

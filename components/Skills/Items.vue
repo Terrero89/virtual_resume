@@ -3,7 +3,7 @@ const props = defineProps(['info'])
 </script>
 
 <template>
-<div>
+<div class="skills">
   <div v-for="item in props.info.tech">{{item}}</div>
 
 
@@ -13,5 +13,13 @@ const props = defineProps(['info'])
 </template>
 
 <style scoped>
+.skills {
+  border: solid #f30000 1px;
+  min-width: 100%;
+  min-height:55rem;
+  border-radius:7px;
+  padding: 0.5rem;
 
+
+}
 </style>
