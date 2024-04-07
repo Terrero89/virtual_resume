@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="header-section">
-      <div class="img-container">
+        <div class="img-container">
 
-        <img src="~/public/sergioTerrero.png" class="header-image" alt="my-avatar" />
-      </div>
+          <img src="~/public/sergioTerrero.png" class="header-image" alt="my-avatar" />
+        </div>
 
-      <div class="header-text">
-        <h3>Sergio Terrero</h3>
-        <p>Software Engineer</p>
-      </div>
+        <div class="header-text">
+          <h3>Sergio Terrero</h3>
+          <p>Software Engineer</p>
+        </div>
     </div>
   </div>
 </template>

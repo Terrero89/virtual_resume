@@ -21,6 +21,8 @@ const props = defineProps(['info'])
     </div>
 
 
+
+
   </div>
 </template>
 

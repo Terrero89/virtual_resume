@@ -1,3 +1,44 @@
+<script setup>
+
+
+const props = defineProps(['info'])
+
+const skillsInfo = ref([
+  {
+    title: "Front-end",
+    text: "I have solid experience using HMTL, CSS, And Javascript as well as UI Frameworks. I'm currently working with Vue Js ecosystem as my main stack, and progresively transitioning to React Js. ",
+  },
+  {
+    title: "Backend",
+    text: "Although not a Backend Developer, I have gained some familiarity with these tools. I have worked on projects where I have applied the fundamentals of each one of them. ",
+  },
+])
+
+const frontend = ref([
+  "Html",
+  "Css",
+  "Javascript",
+  "Typescript",
+  "React JS",
+  "Vue Js",
+  "Nuxt Js",
+  "Bootstrap",
+  "Tailwind",
+
+])
+const backend = ref([
+  "Node Js",
+  "Express Js",
+  "Mongoose",
+  "Firebase",
+  "MongoDB",
+  "Go"
+
+])
+
+</script>
+
+
 <template>
   <section class="skills-wrapper">
     <div
@@ -49,45 +90,7 @@
   </section>
 </template>
 
-<script setup>
 
-
-const props = defineProps(['info'])
-
-const skillsInfo = ref([
-  {
-    title: "Front-end",
-    text: "I have solid experience using HMTL, CSS, And Javascript as well as UI Frameworks. I'm currently working with Vue Js ecosystem as my main stack, and progresively transitioning to React Js. ",
-  },
-  {
-    title: "Backend",
-    text: "Although not a Backend Developer, I have gained some familiarity with these tools. I have worked on projects where I have applied the fundamentals of each one of them. ",
-  },
-])
-
-const frontend = ref([
-  "Html",
-  "Css",
-  "Javascript",
-  "Typescript",
-  "React JS",
-  "Vue Js",
-  "Nuxt Js",
-  "Bootstrap",
-  "Tailwind",
-
-])
-const backend = ref([
-  "Node Js",
-  "Express Js",
-  "Mongoose",
-  "Firebase",
-  "MongoDB",
-  "Go"
-
-])
-
-</script>
 
 
 <style scoped>

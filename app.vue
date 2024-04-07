@@ -29,6 +29,10 @@ width: 100%;
   background: rgb(0, 0, 0);
   background: linear-gradient(175deg, rgb(6, 21, 43) 0%, rgb(26, 36, 44) 46%, rgb(23, 89, 119) 95%);
   border: solid #4f4f4f 1px;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-clip: content-box;
 
 }
 

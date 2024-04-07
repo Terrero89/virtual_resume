@@ -16,7 +16,7 @@ const tabs = ref([
     content: [{
       header: 'About me',
       sub: "Part of my story",
-text: 'I am a dynamic and results-oriented individual with 5+ years of experience in the healthcare industry transitioning to software development. Passionate about technology with a focus on delivering creative quantitative solutions. Seeking a role where I can learn and grow in the industry while adding value to a dynamic team.'
+      text: 'I am a dynamic and results-oriented individual with 5+ years of experience in the healthcare industry transitioning to software development. Passionate about technology with a focus on delivering creative quantitative solutions. Seeking a role where I can learn and grow in the industry while adding value to a dynamic team.'
     },
     ]
   },
@@ -128,7 +128,7 @@ icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 94%;
+  max-width: 46rem;
   margin: 0 auto;
 }
 

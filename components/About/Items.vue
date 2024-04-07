@@ -52,6 +52,8 @@ linkedin: {value: "https://www.linkedin.com/in/sergio-terrero-34045a11b", icon: 
       </div>
 
 
+
+
       <div class="wrap">
         <h3>Contact</h3>
         <div class="contact">
