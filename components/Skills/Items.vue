@@ -70,7 +70,7 @@ const backend = ref([
         </div>
         <div class="expertise-tech">
           <div class="technologies" v-if="skills.title === 'Front-end'">
-            <ul v-for="tech in props.info.tech.frontend">
+            <ul v-for="tech in props.info.tech.frontend" :key="tech.frontend">
               <li>
                 {{ tech }}
               </li>
@@ -78,7 +78,7 @@ const backend = ref([
           </div>
 
           <div class="technologies" v-if="skills.title === 'Backend'">
-            <ul v-for="tech in props.info.tech.backend">
+            <ul v-for="tech in props.info.tech.backend" :key="tech.backend">
               <li>
                 {{ tech }}
               </li>

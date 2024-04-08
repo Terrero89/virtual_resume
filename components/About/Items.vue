@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {ref} from 'vue'
 const props = defineProps(['info'])
 
 let info = ref({
@@ -39,19 +40,27 @@ linkedin: {value: "https://www.linkedin.com/in/sergio-terrero-34045a11b", icon: 
       <div class="bio wrap">
         <h3>About me</h3>
         <p>{{ props.info.text }}</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ac ante sit amet porta. Ut
-           </p>
+       
       </div>
       <div class="bio wrap">
         <h3>Bio</h3>
         <p>{{ props.info.text }}</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ac ante sit amet porta. Ut
-          faucibus ante vehicula odio tempus, mollis aliquam neque porttitor. Donec eu tellus ex. Donec rhoncus neque
-          vitae nisi fermentum, sit amet mattis elit venenatis. Suspendisse hendrerit suscipit turpis. Phasellus non
-          tr</p>
+       
+      
       </div>
 
-
+      <div class="bio wrap">
+        <h3>Frontend</h3>
+       hello world
+       
+      
+      </div>
+      <div class="bio wrap">
+        <h3>Backend</h3>
+       hello world
+       
+      
+      </div>
 
 
       <div class="wrap">
@@ -94,16 +103,14 @@ linkedin: {value: "https://www.linkedin.com/in/sergio-terrero-34045a11b", icon: 
 .about-item {
   width: 98%;
   border-radius: 7px;
-  padding: 0.5rem;
+
   display: flex;
   justify-content: center;
 }
 
 .about-wrapper {
-  margin: 0.5rem 0;
   display: flex;
   justify-content: center;
-
   flex-direction: column;
   max-width: 50rem;
 }
@@ -151,8 +158,6 @@ justify-content: space-around;
 }
 
 .wrap {
-
-
   border: solid rgba(106, 106, 106, 0.64) 1px;
   padding: 0.8rem;
   border-radius: 7px;

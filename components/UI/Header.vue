@@ -34,6 +34,7 @@
   width: 12rem;
   height: 12rem;
   margin: 0 auto;
+  
 
   background-position: center;
   background-repeat: no-repeat;

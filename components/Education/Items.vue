@@ -79,6 +79,7 @@ const props = defineProps(['info'])
 
 
 .wrap {
+  
   border: solid rgba(106, 106, 106, 0.64) 1px;
   padding: 0 1.5rem;
   border-radius: 10px;
