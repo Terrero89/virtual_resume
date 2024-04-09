@@ -8,13 +8,22 @@ const props = defineProps(['info'])
     <div class="projects-wrapper wrap" >
 
       <div class="item">
-        <h1>{{ info.project}}</h1>
+
+
+        <div class="header">
+          <h1>{{ info.project}}</h1>
+          <p>{{ info.description.slice(0, 100)}}... more</p>
+
+
+
+        </div>
         <div  class="tech" v-for="tech in info.technology">
           <span class="tech-item">{{ tech}}</span>
 
 
         </div>
-        <p>{{ info.description.slice(0, 100)}}... more</p>
+
+<!--        <p>{{ info.description.slice(0, 100)}}... more</p>-->
 
 
 
@@ -35,6 +44,8 @@ const props = defineProps(['info'])
 <style scoped>
 .tech{
   display: inline-block;
+  align-content: center;
+  ;
 }
 
 .tech-item{
@@ -94,8 +105,7 @@ const props = defineProps(['info'])
 
 
 }
-.item .info{
-  margin-right:  auto;
+.item p{align-content: flex-end;
 
 
 
