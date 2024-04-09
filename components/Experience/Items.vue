@@ -3,21 +3,22 @@ const props = defineProps(['info'])
 </script>
 
 <template>
-  <div class="projects">
+  <div class="experience">
 
-    <div class="projects-wrapper wrap" >
+    <div class="education-wrapper wrap">
 
       <div class="item">
-        <h1>{{ info.project}}</h1>
-        <div  class="tech" v-for="tech in info.technology">
-          <span class="tech-item">{{ tech}}</span>
-
+        <div class="header">
+          <h1>{{ info.company }}</h1>
+          <h3>{{ info.position }}</h3>
+          <span>{{ info.city }}</span>
 
         </div>
-        <p>{{ info.description.slice(0, 100)}}... more</p>
+      <div class="info">
 
 
-
+        <span>{{ info.dates }}</span>
+      </div>
 
 
 
@@ -33,14 +34,7 @@ const props = defineProps(['info'])
 </template>
 
 <style scoped>
-.tech{
-  display: inline-block;
-}
 
-.tech-item{
-  margin-right: 1rem;
-  color: #61dbfb;
-}
 .wrap {
   box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
   -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
@@ -48,17 +42,19 @@ const props = defineProps(['info'])
   border: solid rgba(106, 106, 106, 0.10) 1px;
   padding: 0 1.5rem;
   border-radius: 10px;
-  margin:1rem auto;
+  margin: 1rem auto;
   background-color: rgba(255, 255, 255, 0.09);
 
+
 }
-.projects{
+
+.experience {
   border-radius: 7px;
 
 }
 
-.projects-wrapper {
-
+.education-wrapper {
+width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -87,16 +83,18 @@ const props = defineProps(['info'])
 }
 
 .item .header{
+  width: 14rem;
 
-  width: 12rem;
+
 
 
 
 
 }
 .item .info{
-  margin-right:  auto;
 
+  width: 18rem;
+  align-content:flex-end;
 
 
 
@@ -130,10 +128,18 @@ const props = defineProps(['info'])
 
 
 
+
   }
 }
 
 
+
+.item p {
+
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin: 0.2rem auto;
+}
 
 
 </style>
