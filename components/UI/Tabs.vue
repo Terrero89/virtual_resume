@@ -48,7 +48,7 @@ let isFalse = ref(false);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 46rem;
+  max-width: 40rem;
   margin: 0 auto;
 }
 
@@ -63,12 +63,11 @@ let isFalse = ref(false);
 }
 
 .content {
-  margin: 3rem auto;
+  margin: 2rem auto;
   max-width: 48rem;
 
   align-items: center;
-  display: flex;
-  justify-content: center;
+
   /* border: solid red 1px; */
 }
 

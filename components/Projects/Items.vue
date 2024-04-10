@@ -1,32 +1,41 @@
 <script setup lang="ts">
 const props = defineProps(['info'])
+
+
+const isModalOpen = ref(false);
+
+const openModal = () => {
+  isModalOpen.value = true;
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+};
 </script>
 
-<template>
-  <div class="projects">
 
-    <div class="projects-wrapper wrap" >
+
+
+<template>
+  <div class="education">
+
+    <div class="education-wrapper wrap" >
 
       <div class="item">
-
-
         <div class="header">
-          <h1>{{ info.project}}</h1>
-          <p>{{ info.description.slice(0, 100)}}... more</p>
-
-
-
-        </div>
-        <div  class="tech" v-for="tech in info.technology">
-          <span class="tech-item">{{ tech}}</span>
+          <h1>{{ info.project }}</h1>
+          <h3>{{ info.description.slice(0,12)}}</h3>
 
 
         </div>
 
-<!--        <p>{{ info.description.slice(0, 100)}}... more</p>-->
+        <div class="info">
+          <div class="tech" v-for="tech in info.technology">
+            <span class="tech-item">{{tech}}</span>
+          </div>
 
 
-
+        </div>
 
 
 
@@ -40,22 +49,26 @@ const props = defineProps(['info'])
 
 
 </template>
-
 <style scoped>
 .tech{
+  max-width:15rem;
   display: inline-block;
-  align-content: center;
-  ;
+  flex-direction: column;
+
+
 }
 
-.tech-item{
-  margin-right: 1rem;
+.tech .tech-item{
+margin-right: 0.8rem;
+
   color: #61dbfb;
+
 }
 .wrap {
   box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
   -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
   -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
+  width: 48rem;
   border: solid rgba(106, 106, 106, 0.10) 1px;
   padding: 0 1.5rem;
   border-radius: 10px;
@@ -63,49 +76,56 @@ const props = defineProps(['info'])
   background-color: rgba(255, 255, 255, 0.09);
 
 }
-.projects{
+.education {
   border-radius: 7px;
 
 }
 
-.projects-wrapper {
-
+.education-wrapper {
+  width: 98%;
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: center;
 
+
 }
 
 .education-wrapper .image {
-  object-fit: cover;
+  object-fit: contain;
+
 }
 
 .education img {
-  object-fit: cover;
-  height: 6rem;
+  object-fit:cover;
+  min-height: 6rem;
   width: 6rem;
   border-radius: 7px;
 
 
 }
+
 .item {
 
-  padding: 1rem;
-  margin: auto  1rem;
+  padding: 0.8rem 1rem;
+
+
 
 
 }
 
 .item .header{
-
   width: 12rem;
 
+  margin-right: 1rem;
 
 
 
 }
-.item p{align-content: flex-end;
+.item .info{
+  margin:0 auto ;
+  align-content: flex-end;
+  align-items: flex-end;
 
 
 
@@ -142,8 +162,6 @@ const props = defineProps(['info'])
 
   }
 }
-
-
 
 
 </style>

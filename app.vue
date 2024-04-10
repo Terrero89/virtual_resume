@@ -69,7 +69,9 @@ const tabs = ref([
         year: "2020",
         description:"\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"\n" +
             "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
+        link:"LINK",
         technology: ["Go","Vue", "React"],
+        image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
       },
       {
         project: "Foodie App",
@@ -77,6 +79,7 @@ const tabs = ref([
         description:"",
         link:"LINK",
         technology: ["Node ", "React", "Express", "Mongoose", "MongoDB"],
+        image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
       },
       {
         project: "Airplane App",
@@ -85,6 +88,7 @@ const tabs = ref([
             "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
         link:"LINK",
         technology: ["Node", "React", "Express", "Mongoose", "MongoDB"],
+        image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
       },
       {
         project: "Card Payment UI",
@@ -93,6 +97,7 @@ const tabs = ref([
             "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
         link:"LINK",
         technology: ["Node", "React", "Express", "Mongoose", "MongoDB"],
+image:             "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/UMass-Lowell_logo.svg/1200px-UMass-Lowell_logo.svg.png",
       },
     ],
   },

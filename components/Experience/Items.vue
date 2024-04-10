@@ -2,23 +2,27 @@
 const props = defineProps(['info'])
 </script>
 
-<template>
-  <div class="experience">
 
-    <div class="education-wrapper wrap">
+
+
+<template>
+  <div class="education">
+
+    <div class="education-wrapper wrap" >
 
       <div class="item">
         <div class="header">
-          <h1>{{ info.company }}</h1>
-          <h3>{{ info.position }}</h3>
-          <span>{{ info.city }}</span>
+                    <h1>{{ info.company }}</h1>
+                    <h3>{{ info.position }}</h3>
+                    <span>{{ info.city }}</span>
 
         </div>
-      <div class="info">
+
+        <div class="info">
+          <span>{{ info.dates }}</span>
 
 
-        <span>{{ info.dates }}</span>
-      </div>
+        </div>
 
 
 
@@ -32,113 +36,101 @@ const props = defineProps(['info'])
 
 
 </template>
-
 <style scoped>
-
 .wrap {
-  box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
-  -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
-  -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-  border: solid rgba(106, 106, 106, 0.10) 1px;
-  padding: 0 1.5rem;
-  border-radius: 10px;
-  margin: 1rem auto;
-  background-color: rgba(255, 255, 255, 0.09);
-
+box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
+-webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
+-moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
+width: 48rem;
+border: solid rgba(106, 106, 106, 0.10) 1px;
+padding: 0 1.5rem;
+border-radius: 10px;
+margin:1rem auto;
+background-color: rgba(255, 255, 255, 0.09);
 
 }
-
-.experience {
-  border-radius: 7px;
+.education {
+border-radius: 7px;
 
 }
 
 .education-wrapper {
-width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
+width: 98%;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+
 
 }
 
 .education-wrapper .image {
-  object-fit: cover;
+object-fit: contain;
+
 }
 
 .education img {
-  object-fit: cover;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 7px;
+object-fit:cover;
+min-height: 6rem;
+width: 6rem;
+border-radius: 7px;
 
 
 }
+
 .item {
 
-  padding: 1rem;
-  margin: auto  1rem;
+padding: 1rem;
+margin: auto  1rem;
 
 
 }
 
 .item .header{
-  width: 14rem;
-
-
+width: 18rem;
 
 
 
 
 }
 .item .info{
+margin-right:  auto;
+  align-content: flex-end;
 
-  width: 18rem;
-  align-content:flex-end;
 
 
 
 }
 .item h1 {
 
-  margin: 0.5rem auto;
+margin: 0.5rem auto;
 
-  font-weight: bold;
-  font-size: 1.1rem;
+font-weight: bold;
+font-size: 1.1rem;
 }
 
 .item h3 {
 
-  font-weight: bold;
-  font-size: 0.9rem;
-  margin: 0.2rem auto;
+font-weight: bold;
+font-size: 0.9rem;
+margin: 0.2rem auto;
 }
 
 .item p {
 
-  font-weight: 400;
-  font-size: 1rem;
-  margin: 0.2rem auto;
+font-weight: 400;
+font-size: 1rem;
+margin: 0.2rem auto;
 }
 @media only screen and (min-width: 470px) {
-  .item {
-    display: flex;
-    justify-content: space-between;
-    margin-right:  auto;
+.item {
+display: flex;
+justify-content: space-between;
+margin-right:  auto;
 
 
 
-
-  }
 }
-
-
-
-.item p {
-
-  font-weight: 400;
-  font-size: 0.85rem;
-  margin: 0.2rem auto;
 }
 
 

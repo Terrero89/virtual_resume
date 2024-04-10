@@ -67,12 +67,14 @@ width: 96%;
 
 .education-wrapper .image {
   object-fit: contain;
+  height: 6rem;
+  width: 6rem;
 
 }
 
 .education img {
-  object-fit:cover;
-  min-height: 6rem;
+  object-fit:contain;
+  height: 6rem;
   width: 6rem;
   border-radius: 7px;
 
