@@ -6,25 +6,28 @@ const props = defineProps(['info'])
   <div class="education">
 
     <div class="education-wrapper wrap" v-for="item in props.info" :key="item.info">
-      <div class="image">
-        <img :src="item.schoolLogo"/>
-      </div>
+
+
       <div class="item">
-        <div class="header">
-          <h3>{{ item.degreeType }}</h3>
-          <h1>{{ item.degree }}</h1>
-
+        <div class="image">
+          <img :src="item.schoolLogo" alt="school_logo"/>
         </div>
+<div>
 
+
+
+</div>
         <div class="info">
-          <h1>{{ item.school }}</h1>
-          <span>{{ item.dates }}</span>
-
-
+          <div class="title">
+            <span>{{ item.degreeType }} </span>
+            <h3>{{ item.degree }}</h3>
+            <h1>{{ item.school }}</h1>
+          </div>
         </div>
 
-
-
+        <div class="header">
+          <span>{{ item.dates }}</span>
+        </div>
       </div>
 
 
@@ -37,43 +40,49 @@ const props = defineProps(['info'])
 </template>
 
 <style scoped>
+.title {
+
+  margin-bottom: 1rem;
+}
 
 .wrap {
   box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
   -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
-  -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-width: 48rem;
+  -moz-box-shadow: 0px 5px 16px -7px rgba(0, 0, 0, 1);
+  width: 48rem;
   border: solid rgba(106, 106, 106, 0.10) 1px;
-  padding: 0 1.5rem;
-  border-radius: 10px;
-  margin:1rem auto;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin: 1rem auto;
   background-color: rgba(255, 255, 255, 0.09);
 
 }
+
 .education {
   border-radius: 7px;
 
 }
 
 .education-wrapper {
-width: 96%;
+  width: 98%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
+flex-direction: column;
 
 
 }
 
 .education-wrapper .image {
   object-fit: contain;
-  height: 6rem;
-  width: 6rem;
+
+width: 10rem;
+
+
+
 
 }
 
 .education img {
-  object-fit:contain;
+  object-fit: cover;
   height: 6rem;
   width: 6rem;
   border-radius: 7px;
@@ -83,32 +92,42 @@ width: 96%;
 
 .item {
 
-  padding: 1rem;
-  margin: auto  1rem;
+  padding: 0.5rem
 
 
 }
 
 .item .header{
-  width: 12rem;
 
+  margin-bottom: 1rem;
+
+  width:10rem;
+
+
+}
+
+.item .info {
+
+width:20rem;
 
 
 
 }
-.item .info{
-margin-right:  auto;
 
-
-
-
-}
 .item h1 {
 
   margin: 0.5rem auto;
 
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.item span {
+
+  color: #e4e4e4;
+
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .item h3 {
@@ -119,20 +138,22 @@ margin-right:  auto;
 }
 
 .item p {
-
+  color: #cdcdcd;
   font-weight: 400;
   font-size: 1rem;
   margin: 0.2rem auto;
 }
+
 @media only screen and (min-width: 470px) {
   .item {
-    display: flex;
-    justify-content: space-between;
-    margin-right:  auto;
 
+    display: flex;
+    justify-content: space-evenly;
 
 
   }
+
+
 }
 
 

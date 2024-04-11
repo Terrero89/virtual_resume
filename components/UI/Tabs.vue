@@ -18,7 +18,7 @@ let isFalse = ref(false);
            :key="index"
            @click="activateTab(index)"
            :class="{ 'active': activeTab === index }" class="tab">
-        <img :src="tab.icon" class="tab-icon" v-if="tab.icon" alt="icon">
+        <img :src="tab.icon" class="tab-icon" v-if="tab.icon" alt="tab-icons">
         <h1>{{ tab.label }}</h1>
       </div>
     </div>

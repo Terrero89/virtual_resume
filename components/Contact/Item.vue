@@ -84,7 +84,7 @@ const props = defineProps(["contactInfo"]);
   -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
   border: solid rgba(106, 106, 106, 0.10) 1px;
   padding: 0.8rem;
-  border-radius: 7px;
+  border-radius: 5px;
   margin: 0.5rem 0;
   background-color: rgba(255, 255, 255, 0.09);
 }

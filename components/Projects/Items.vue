@@ -71,11 +71,13 @@ margin-right: 0.8rem;
   width: 48rem;
   border: solid rgba(106, 106, 106, 0.10) 1px;
   padding: 0 1.5rem;
-  border-radius: 10px;
+  border-radius: 5px;
   margin:1rem auto;
   background-color: rgba(255, 255, 255, 0.09);
 
 }
+
+
 .education {
   border-radius: 7px;
 
