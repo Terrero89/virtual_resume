@@ -56,11 +56,11 @@ const tabs = ref([
       {company:"Hack Diversity",city: "Boston, MA",  position: "Software Engineer Fellow", dates: "2024 -- present",
         description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
             "development program integrating Boston’s innovation, corporate, civic, academic, and philanthropic pillars."},
-      {company:"Blue Cross Blue Shield of MA",city: "Hingham, MA",  position: "Enrollment Processor III", dates: "2022 -- Present",  description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
+      {company:"BCBSMA",city: "Hingham, MA",  position: "Enrollment Processor III", dates: "2022 -- Present",  description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
             "development program integrating Boston’s innovation, corporate, civic, academic, and philanthropic pillars."},
-      {company:"Blue Cross Blue Shield of MA",city: "Hingham, MA",  position: "Data Analyst (Job Shadowing)", dates: "2022 -- 2022", description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
+      {company:"BCBSMA",city: "Hingham, MA",  position: "Data Analyst", dates: "2022 -- 2022", description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
             "development program integrating Boston’s innovation, corporate, civic, academic, and philanthropic pillars." },
-      {company:"Blue Cross Blue Shield of MA",city: "Hingham, MA",  position: "Directory & Audit Processor", dates: "2018 -- 2022", description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
+      {company:"BCBSMA",city: "Hingham, MA",  position: "Directory & Audit Processor", dates: "2018 -- 2022", description: "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
             "development program integrating Boston’s innovation, corporate, civic, academic, and philanthropic pillars." },
     ],
   },

@@ -45,7 +45,7 @@ const props = defineProps(['info'])
   margin-bottom: 1rem;
 }
 
-.wrap {
+/*.wrap {
   box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
   -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
   -moz-box-shadow: 0px 5px 16px -7px rgba(0, 0, 0, 1);
@@ -55,6 +55,18 @@ const props = defineProps(['info'])
   border-radius: 5px;
   margin: 1rem auto;
   background-color: rgba(255, 255, 255, 0.09);
+
+}*/
+
+
+.wrap {
+
+  width: 48rem;
+
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin: 2rem auto;
+  border-bottom: solid rgba(128, 128, 128, 0.41) 1px;
 
 }
 

@@ -56,13 +56,23 @@ const props = defineProps(["info"]);
    margin: 0.5rem ;
 } */
 
-.skill-box {
+/*.skill-box {
   margin: 1rem auto ;
   border-radius: 10px;
   border: solid rgba(106, 106, 106, 0.64) 1px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.09);
 }
+*/
+.skill-box {
+  margin: 2rem auto ;
+  border-radius: 10px;
+  border-bottom: solid rgba(106, 106, 106, 0.64) 1px;
+  padding: 1rem;
+
+}
+
+
 
 
 .expertise-box h3 {

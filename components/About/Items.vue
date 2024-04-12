@@ -122,7 +122,7 @@ const skillsInfo = ref([
   font-size: 0.85rem;
 }
 
-.wrap {
+/*.wrap {
   box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
   -webkit-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
   -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
@@ -132,7 +132,17 @@ const skillsInfo = ref([
   margin: 0.5rem 0;
   background-color: rgba(255, 255, 255, 0.09);
 
+}*/
+.wrap {
+
+  border-bottom: solid rgba(106, 106, 106, 0.10) 1px;
+  padding: 0.8rem;
+  border-radius: 7px;
+  margin: 0.5rem 0;
+
+
 }
+
 
 
 .about-item h3 {
