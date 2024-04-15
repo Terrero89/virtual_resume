@@ -19,9 +19,10 @@ const props = defineProps(['info'])
 </div>
         <div class="info">
           <div class="title">
-            <span>{{ item.degreeType }} </span>
-            <h3>{{ item.degree }}</h3>
             <h1>{{ item.school }}</h1>
+            <span>{{ item.degreeType }} in  </span>
+            <span>{{ item.degree }} </span>
+
           </div>
         </div>
 
@@ -84,7 +85,7 @@ flex-direction: column;
 }
 
 .education-wrapper .image {
-  object-fit: contain;
+  object-fit: cover;
 
 width: 10rem;
 
@@ -94,7 +95,7 @@ width: 10rem;
 }
 
 .education img {
-  object-fit: cover;
+  object-fit: contain;
   height: 6rem;
   width: 6rem;
   border-radius: 7px;
@@ -167,6 +168,17 @@ width:20rem;
 
 
 }
+@media only screen and (max-width: 470px) {
+  .image{
+
+margin: 1rem 0 ;
+
+
+  }
+
+
+}
+
 
 
 </style>

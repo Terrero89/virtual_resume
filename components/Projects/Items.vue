@@ -2,41 +2,27 @@
 const props = defineProps(['info'])
 
 
-const isModalOpen = ref(false);
-
-const openModal = () => {
-  isModalOpen.value = true;
-};
-
-const closeModal = () => {
-  isModalOpen.value = false;
-};
 </script>
-
-
 
 
 <template>
   <div class="education">
 
-    <div class="education-wrapper wrap" >
+    <div class="education-wrapper wrap">
 
       <div class="item">
         <div class="header">
           <h1>{{ info.project }}</h1>
-          <h3>{{ info.description.slice(0,12)}}</h3>
+          <p>{{ info.description.slice(0, 90) }}</p>
 
 
         </div>
 
         <div class="info">
-          <div class="tech" v-for="tech in info.technology">
-            <span class="tech-item">{{tech}}</span>
-          </div>
 
+          <ProjectsItem :items="info.technology"/>
 
         </div>
-
 
 
       </div>
@@ -50,20 +36,8 @@ const closeModal = () => {
 
 </template>
 <style scoped>
-.tech{
-  max-width:15rem;
-  display: inline-block;
-  flex-direction: column;
 
 
-}
-
-.tech .tech-item{
-margin-right: 0.8rem;
-
-  color: #61dbfb;
-
-}
 /*.wrap {
   box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
   -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
@@ -81,11 +55,11 @@ margin-right: 0.8rem;
 
   width: 48rem;
 
-  padding: 0.3rem;
-  border-radius: 5px;
-  margin: 2rem auto;
-  border-bottom: solid rgba(128, 128, 128, 0.41) 1px;
 
+  border-radius: 5px;
+  margin: 2.5rem auto;
+
+  border-bottom: solid rgba(106, 106, 106, 0.9) 1px;
 }
 
 
@@ -110,7 +84,7 @@ margin-right: 0.8rem;
 }
 
 .education img {
-  object-fit:cover;
+  object-fit: cover;
   min-height: 6rem;
   width: 6rem;
   border-radius: 7px;
@@ -120,30 +94,27 @@ margin-right: 0.8rem;
 
 .item {
 
-  padding: 0.8rem 1rem;
-
-
+  padding: 0.8rem 0.8rem;
 
 
 }
 
-.item .header{
-  width: 12rem;
+.item .header {
+  width: 18rem;
 
   margin-right: 1rem;
 
 
-
 }
-.item .info{
-  margin:0 auto ;
+
+.item .info {
+  margin: 0 auto;
   align-content: flex-end;
   align-items: flex-end;
 
 
-
-
 }
+
 .item h1 {
 
   margin: 0.5rem auto;
@@ -160,17 +131,17 @@ margin-right: 0.8rem;
 }
 
 .item p {
-
+color: #cacaca;
   font-weight: 400;
   font-size: 1rem;
   margin: 0.2rem auto;
 }
+
 @media only screen and (min-width: 470px) {
   .item {
     display: flex;
     justify-content: space-between;
-    margin-right:  auto;
-
+    margin-right: auto;
 
 
   }

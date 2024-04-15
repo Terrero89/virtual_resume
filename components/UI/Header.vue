@@ -1,3 +1,8 @@
+
+<script setup>
+const props = defineProps(["socialIcons"]);
+</script>
+
 <template>
   <div>
     <div class="header-section">
@@ -9,6 +14,8 @@
         <div class="header-text">
           <h3>Sergio Terrero</h3>
           <p>Software Engineer</p>
+          <UISocial/>
+
         </div>
     </div>
   </div>
@@ -92,3 +99,5 @@
   color: #bdbdbd;
 }
 </style>
+<script setup lang="ts">
+</script>

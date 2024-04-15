@@ -56,7 +56,7 @@ const props = defineProps(["contactInfo"]);
 .contact {
   padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
+
   flex-wrap: wrap;
 }
 
@@ -67,7 +67,7 @@ const props = defineProps(["contactInfo"]);
 .head {
   margin: 0.5rem 0;
   display: flex;
-  justify-content: space-around;
+
 }
 .head img {
   align-content: center;
@@ -75,6 +75,7 @@ const props = defineProps(["contactInfo"]);
 }
 
 .wrap .contact a {
+  margin-right: 1em;
   font-size: 0.85rem;
 }
 

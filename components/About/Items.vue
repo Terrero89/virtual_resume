@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import TechItem from "~/components/About/TechItem.vue";
 const props = defineProps(["info"]);
 
 let info = ref({
@@ -46,43 +47,31 @@ let info = ref({
   },
 });
 
-const skillsInfo = ref([
-  {
-    title: "Front-end",
-    text: "I have solid experience using HMTL, CSS, And Javascript as well as UI Frameworks. I'm currently working with Vue Js ecosystem as my main stack, and progresively transitioning to React Js. ",
-    skills: [
-      "Html",
-      "Css",
-      "Javascript",
-      "Typescript",
-      "React JS",
-      "Vue Js",
-      "Nuxt Js",
-      "Bootstrap",
-      "Tailwind",
-    ],
-  },
-  {
-    title: "Backend",
-    text: "Although not a Backend Developer, I have gained some familiarity with these tools. I have worked on projects where I have applied the fundamentals of each one of them. ",
-    skills: ["Node Js", "Express Js", "Mongoose", "Firebase", "MongoDB", "Go"],
-  },
-]);
 
 </script>
-
 <template>
   <div class="about-item">
     <div class="about-wrapper">
       <div class="bio wrap">
-        <h3>About me</h3>
+        <h1>About me</h1>
+        <p>{{ props.info.text }}</p>
         <p>{{ props.info.text }}</p>
       </div>
 
-      <TechStack :info="skillsInfo" />
+      <div class="bio wrap">
+        <h1>Technologies I use.</h1>
+        <TechItem :items="props.info.techStack.frontend.sort((a,b)=> 0.5 - Math.random())"/>
+        <TechItem :items="props.info.techStack.backend.sort((a,b)=> 0.5 - Math.random())"/>
+
+      </div>
+      <div class="bio wrap">
+        <h1>Interests</h1>
+        <p>{{ props.info.text }}</p>
+      </div>
+    
       <ContactItem :contactInfo="info"/>
 
-      
+
     </div>
   </div>
 </template>
@@ -135,9 +124,9 @@ const skillsInfo = ref([
 }*/
 .wrap {
 
-  border-bottom: solid rgba(106, 106, 106, 0.10) 1px;
+  border-bottom: solid rgba(106, 106, 106) 1px;
   padding: 0.8rem;
-  border-radius: 7px;
+  border-radius: 5px;
   margin: 0.5rem 0;
 
 
@@ -145,7 +134,7 @@ const skillsInfo = ref([
 
 
 
-.about-item h3 {
+.about-item h1 {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   margin: 0.5rem 0;
@@ -161,7 +150,9 @@ const skillsInfo = ref([
 
 .about-item p {
   margin-bottom: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  color: #cacaca;
+
 }
 
 .about-item p a {

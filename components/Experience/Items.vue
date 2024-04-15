@@ -163,13 +163,14 @@ display: inline-block;
 
 
   font-weight: bold;
-  font-size: 0.9em;
+  font-size:1rem;
 }
 .item h3 {
   display: inline-block;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size:1rem;
   margin: 0.2rem auto;
+  color: #02d5fa;
 }
 
 .item span {
@@ -186,7 +187,7 @@ display: inline-block;
   color: #cdcdcd;
   font-weight: 400;
   font-size: 1rem;
-  margin: 0.2rem auto;
+  margin: 0.3rem auto;
 }
 
 @media only screen and (min-width: 470px) {

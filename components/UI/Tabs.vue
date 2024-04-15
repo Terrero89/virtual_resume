@@ -18,7 +18,7 @@ let isFalse = ref(false);
            :key="index"
            @click="activateTab(index)"
            :class="{ 'active': activeTab === index }" class="tab">
-        <img :src="tab.icon" class="tab-icon" v-if="tab.icon" alt="tab-icons">
+        <img :src="tab.icon" class="tab-icon" v-if="tab.icon" :alt="tab.icon">
         <h1>{{ tab.label }}</h1>
       </div>
     </div>
@@ -40,15 +40,23 @@ let isFalse = ref(false);
   </div>
 </template>
 <style scoped>
+
+.tab h1{
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight:700;
+}
+
 .tabs-container {
   width: 100%;
+
 }
 .tab-size {
   border-radius: 2px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 40rem;
+  max-width: 44rem;
   margin: 0 auto;
 }
 
@@ -63,6 +71,7 @@ let isFalse = ref(false);
 }
 
 .content {
+
   margin: 2rem auto;
   max-width: 48rem;
 
@@ -83,15 +92,15 @@ let isFalse = ref(false);
 
 .tab:hover {
   background-color: rgba(255, 255, 255, 0.3);
-  color: #61dbfb;
+  color: #02d5fa;
   border-radius: 5px;
 }
 
 .tab.active {
-  background-color: rgba(255, 255, 255, 0.3);
-  opacity: 0.7;
+  background-color: rgba(255, 255, 255, 0.2);
+
   border-radius: 5px;
-  color: #61dbfb;
+  color: #02d5fa;
 }
 
 .tab-content {
@@ -105,7 +114,7 @@ let isFalse = ref(false);
 
 @media only screen and (max-width: 768px) {
   .cool {
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
   }
