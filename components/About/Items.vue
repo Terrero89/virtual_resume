@@ -107,7 +107,7 @@ let info = ref({
 }
 
 .wrap:hover{
-  background-color: rgba(148, 148, 148, 0.18);
+  background-color: rgba(148, 148, 148, 0.20);
   border: none;
   transition: 300ms linear;
 }
