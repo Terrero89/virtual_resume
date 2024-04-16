@@ -80,7 +80,7 @@ const props = defineProps(['info'])
 }
 
 .item .header {
-  width: 24rem;
+  max-width: 24rem;
 
   margin-right: 1rem;
 

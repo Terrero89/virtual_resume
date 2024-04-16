@@ -18,7 +18,7 @@ let isFalse = ref(false);
            :key="index"
            @click="activateTab(index)"
            :class="{ 'active': activeTab === index }" class="tab">
-        <img :src="tab.icon" class="tab-icon" v-if="tab.icon" :alt="tab.icon">
+        <img :src="tab.icon" class="tab-icon" v-if="tab.icon" :alt="tab.iuco">
         <h1>{{ tab.label }}</h1>
       </div>
     </div>
@@ -43,7 +43,7 @@ let isFalse = ref(false);
 
 .tab h1{
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.8em;
   font-weight:700;
 }
 
