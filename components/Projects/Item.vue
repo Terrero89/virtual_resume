@@ -37,11 +37,15 @@ const props = defineProps(['items'])
 }
 
 .tech .tech-item:hover{
+  transform: scale(5);
 
-  padding: 0.2rem;
-  border-radius: 10px;
-  margin-right: 0.8rem;
+
   /*  color:   #02d5fa}*/
+  color: #4998a5;
+}
+
+.tech-item :hover{
+  transform: scale(1.5);
   color: #4998a5;
 }
 </style>

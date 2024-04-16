@@ -11,7 +11,7 @@ const props = defineProps(["contactInfo"]);
 <template>
 <div>
 
-    <div class="wrap">
+    <div class="">
         <h3>Contact</h3>
         <div class="contact">
           <div class="head">
@@ -79,24 +79,7 @@ const props = defineProps(["contactInfo"]);
   font-size: 0.85rem;
 }
 
-/*.wrap {
-  box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
-  -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
-  -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-  border: solid rgba(106, 106, 106, 0.10) 1px;
-  padding: 0.8rem;
-  border-radius: 5px;
-  margin: 0.5rem 0;
-  background-color: rgba(255, 255, 255, 0.09);
-}*/
-.wrap {
 
-  border-bottom: solid rgba(106, 106, 106, 0.10) 1px;
-  padding: 0.8rem;
-  border-radius: 5px;
-  margin: 0.5rem 0;
-
-}
 
 .tab-icon {
   align-content: center;
@@ -128,4 +111,7 @@ const props = defineProps(["contactInfo"]);
 .about-item p a {
   font-size: 0.5rem;
 }
+
+
+
 </style>

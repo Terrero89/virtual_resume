@@ -5,7 +5,7 @@ const props = defineProps(['info'])
 <template>
   <div class="education">
 
-    <div class="education-wrapper wrap" v-for="item in props.info" :key="item.info">
+    <UIWrapper class="education-wrapper" v-for="item in props.info" :key="item.info">
 
 
       <div class="item">
@@ -20,19 +20,19 @@ const props = defineProps(['info'])
         <div class="info">
           <div class="title">
             <h1>{{ item.school }}</h1>
-            <span>{{ item.degreeType }} in  </span>
-            <span>{{ item.degree }} </span>
+            <span>{{ item.degreeType }}</span>
+            <span > in {{ item.degree }} </span>
 
           </div>
         </div>
 
         <div class="header">
-          <span>{{ item.dates }}</span>
+          <span class="date">{{ item.dates }}</span>
         </div>
       </div>
 
 
-    </div>
+    </UIWrapper>
 
 
   </div>
@@ -46,7 +46,7 @@ const props = defineProps(['info'])
   margin-bottom: 1rem;
 }
 
-/*.wrap {
+/*.wrap { class="sub"
   box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
   -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
   -moz-box-shadow: 0px 5px 16px -7px rgba(0, 0, 0, 1);
@@ -60,16 +60,6 @@ const props = defineProps(['info'])
 }*/
 
 
-.wrap {
-
-  width: 48rem;
-
-  padding: 0.3rem;
-  border-radius: 5px;
-  margin: 2rem auto;
-  border-bottom: solid rgba(128, 128, 128, 0.41) 1px;
-
-}
 
 .education {
   border-radius: 7px;
@@ -137,11 +127,21 @@ width:20rem;
 
 .item span {
 
-  color: #e4e4e4;
+  color: #c8c8c8;
 
   font-weight: bold;
   font-size: 1rem;
 }
+.header .date {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  font-weight: bold;
+
+  font-size: 0.75rem;
+}
+
+
 
 .item h3 {
 
@@ -180,5 +180,10 @@ margin: 1rem 0 ;
 }
 
 
+.wrap:hover{
+  background-color: rgba(148, 148, 148, 0.18);
+  border: none;
+  transition: 200ms linear;
+}
 
 </style>

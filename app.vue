@@ -12,7 +12,7 @@ const tabs = ref([
         header: "About me",
         sub: "Part of my story",
         text: "I am a dynamic and results-oriented individual with 5+ years of experience in the healthcare industry transitioning to software development. Passionate about technology with a focus on delivering creative quantitative solutions. Seeking a role where I can learn and grow in the industry while adding value to a dynamic team.",
-      techStack: {frontend: [
+      techStack: [
       "Html",
       "Css",
       "Javascript",
@@ -22,7 +22,8 @@ const tabs = ref([
       "Nuxt Js",
       "Bootstrap",
       "Tailwind",
-    ], backend:  ["Node Js", "Express Js", "Mongoose", "Firebase", "MongoDB", "Go"],}
+      "Node Js", "Express Js", "Mongoose", "Firebase", "MongoDB", "Go"
+    ]
       },
 
       
@@ -112,38 +113,47 @@ const tabs = ref([
     content: [
       {
         project: "Xray App",
-        year: "2020",
-        description:"\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"\n" +
-            "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
+        type: "Project",
+        year: "2024",
+        description: "(CRUD) application using the MERN stack for radiology reports as an assessment of x-ray images for exams of patients with COVID-19",
         link:"LINK",
-        technology: ["Go","Vue", "React"],
+        technology: ["React", "Express", "Node", "MongoDB"],
         image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
       },
       {
         project: "Foodie App",
-        year: "2021",
-        description:"\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"\n" +
-            "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
-
-        link:"LINK",
-        technology: ["Node ", "React", "Express", "Mongoose", "MongoDB"],
-        image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
-      },
-      {
-        project: "Airplane App",
-        year: "2021",
-        description:"\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"\n" +
-            "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
-        link:"LINK",
+        type: "Personal Project",
+        year: "2023",
+        description:"Simple React.Js practice application UI that displays information entered for finance tracking purposes. At this time application displays entered information, filter by month and year as a way to show features of the application.",
+        link:"https://foodieapp2023.netlify.app/",
         technology: ["Node", "React", "Express", "Mongoose", "MongoDB"],
+        image:             "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/UMass-Lowell_logo.svg/1200px-UMass-Lowell_logo.svg.png",
+      },
+      {
+        project: "Find a Mentor",
+        type: "Personal Project",
+        year: "2021",
+        description:"Web application built using Vue js ecosystem. This application allows to sign up, display information about types of services offered and allow users to send messages to the mentor listed in our system for hiring.",
+
+        link:"https://find-mentor-project.web.app",
+        technology: ["VueJs", "Firebase", "Vuex", "Vue Router", "JWT"],
         image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
       },
       {
-        project: "Card Payment UI",
-        year: "2024",
-        description:"\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"\n" +
-            "\"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...\"",
-        link:"LINK",
+        project: "My Web blog",
+        type: "Personal Project",
+        year: "2021",
+        description:"Personal Blog where I intend to post different articles and posts about technology, and other topics. This web app also allows users to sign up, sign in, as well as post articles and blogs of their preference. The ideas was to allow users to interact with others user through the blog as well.",
+        link:"https://sergioterreroblog.netlify.app/",
+        technology: ["Nuxt js", "Vuex", "JWT", "Firebase", "Axios"],
+        image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crazyegg.com%2Fblog%2Fhow-to-host-a-website%2F&psig=AOvVaw0dl_uYk8w64ZXV5T4j_flG&ust=1712794477616000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDm3OSutoUDFQAAAAAdAAAAABAE"
+      },
+      {
+        project: "Finance Tracker UI",
+        type: "Personal Project",
+        year: "2023",
+        description:"Simple React.Js practice application UI that displays information entered for finance tracking purposes. At this time application displays entered information, filter by month and year as a way to show features of the application.",
+        link:"https://financetracker2023.netlify.app/",
         technology: ["Node", "React", "Express", "Mongoose", "MongoDB"],
 image:             "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/UMass-Lowell_logo.svg/1200px-UMass-Lowell_logo.svg.png",
       },

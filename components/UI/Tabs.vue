@@ -43,7 +43,7 @@ let isFalse = ref(false);
 
 .tab h1{
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight:700;
 }
 

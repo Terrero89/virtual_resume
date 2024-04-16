@@ -8,7 +8,7 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 <template>
   <div class="education">
 
-    <div class="education-wrapper wrap">
+    <UIWrapper class="education-wrapper">
 
       <div class="item">
 
@@ -16,10 +16,7 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
         <div class="header">
 
 
-
-            <span>{{ info.dates }}</span>
-
-
+          <span>{{ info.dates }}</span>
 
 
         </div>
@@ -28,17 +25,15 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
           <div class="title">
 
 
-          <h1>{{ info.position }} </h1> @
+            <h1>{{ info.position }} </h1> @
             <h3>{{ info.company }} </h3>
 
             <img :src="icons">
 
 
-
           </div>
 
           <p>{{ info.description }}</p>
-
 
 
         </div>
@@ -47,7 +42,7 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
       </div>
 
 
-    </div>
+    </UIWrapper>
 
 
   </div>
@@ -62,43 +57,24 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 
   margin-bottom: 1rem;
 }
-.position-flex{
+
+.position-flex {
   display: flex;
 }
 
-.title img{
+.title img {
   min-height: 0.2rem;
   min-width: 0.3rem;
 
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 
   margin-left: 0.5rem;
 
   display: inline-block;
 }
 
-/*.wrap {
-  box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
-  -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
-  -moz-box-shadow: 0px 5px 16px -7px rgba(0, 0, 0, 1);
-  width: 48rem;
-  border: solid rgba(106, 106, 106, 0.10) 1px;
-
-  border-radius: 5px;
-  margin: 1rem auto;
-  background-color: rgba(255, 255, 255, 0.09);
-
-}*/
-.wrap {
-
-  width: 48rem;
-  border-bottom: solid rgba(128, 128, 128, 0.41) 1px;
-
-  border-radius: 5px;
-  margin: 3rem auto;
 
 
-}
 
 .education {
   border-radius: 7px;
@@ -106,7 +82,7 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 }
 
 .education-wrapper {
-  width: 98%;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -143,11 +119,13 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 
 
 }
+
 .item .header div {
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .item .header img {
   margin: 0.4rem auto;
   height: 0.2rem;
@@ -159,28 +137,29 @@ display: flex;
 }
 
 .item h1 {
-display: inline-block;
-
-
-  font-weight: bold;
-  font-size:1rem;
-}
-.item h3 {
   display: inline-block;
-  font-weight: bold;
-  font-size:1rem;
-  margin: 0.2rem auto;
-  color: #02d5fa;
-}
 
-.item span {
-
-  color: #e4e4e4;
 
   font-weight: bold;
   font-size: 1rem;
 }
 
+.item h3 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.2rem auto;
+  color: #02d5fa;
+}
+
+.item span {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  font-weight: bold;
+
+  font-size: 0.75rem;
+}
 
 
 .item p {
@@ -188,6 +167,7 @@ display: inline-block;
   font-weight: 400;
   font-size: 1rem;
   margin: 0.3rem auto;
+
 }
 
 @media only screen and (min-width: 470px) {
@@ -200,4 +180,9 @@ display: inline-block;
 }
 
 
+.wrap:hover {
+  background-color: rgba(148, 148, 148, 0.18);
+  border: none;
+  transition: 200ms linear;
+}
 </style>

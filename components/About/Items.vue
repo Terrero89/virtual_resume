@@ -52,24 +52,22 @@ let info = ref({
 <template>
   <div class="about-item">
     <div class="about-wrapper">
-      <div class="bio wrap">
+      <UIWrapper class="bio">
         <h1>About me</h1>
         <p>{{ props.info.text }}</p>
         <p>{{ props.info.text }}</p>
-      </div>
+      </UIWrapper>
 
-      <div class="bio wrap">
+      <UIWrapper class="bio">
         <h1>Technologies I use.</h1>
-        <TechItem :items="props.info.techStack.frontend.sort((a,b)=> 0.5 - Math.random())"/>
-        <TechItem :items="props.info.techStack.backend.sort((a,b)=> 0.5 - Math.random())"/>
+        <TechItem :items="props.info.techStack"/>
+       
 
-      </div>
-      <div class="bio wrap">
-        <h1>Interests</h1>
-        <p>{{ props.info.text }}</p>
-      </div>
-    
-      <ContactItem :contactInfo="info"/>
+      </UIWrapper>
+<UIWrapper>
+  <ContactItem :contactInfo="info"/>
+</UIWrapper>
+
 
 
     </div>
@@ -97,39 +95,21 @@ let info = ref({
 
 
 
-.contact p {
-  font-size: 1.5rem;
-}
 
-
-.head img {
-  align-content: center;
-  align-items: center;
-}
-
-.wrap .contact a {
-  font-size: 0.85rem;
-}
-
-/*.wrap {
-  box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-  -webkit-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-  border: solid rgba(106, 106, 106, 0.10) 1px;
-  padding: 0.8rem;
-  border-radius: 7px;
-  margin: 0.5rem 0;
-  background-color: rgba(255, 255, 255, 0.09);
-
-}*/
 .wrap {
 
-  border-bottom: solid rgba(106, 106, 106) 1px;
+
   padding: 0.8rem;
   border-radius: 5px;
   margin: 0.5rem 0;
 
 
+}
+
+.wrap:hover{
+  background-color: rgba(148, 148, 148, 0.18);
+  border: none;
+  transition: 300ms linear;
 }
 
 
@@ -139,19 +119,16 @@ let info = ref({
   display: inline-block;
   margin: 0.5rem 0;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
-.about-item .sub {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
 
 .about-item p {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
-  color: #cacaca;
+  font-size: 1.05rem;
+  color: #bcbcbc;
 
 }
 

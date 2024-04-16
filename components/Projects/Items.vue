@@ -8,12 +8,14 @@ const props = defineProps(['info'])
 <template>
   <div class="education">
 
-    <div class="education-wrapper wrap">
+
+
+    <UIWrapper class="education-wrapper wrap ">
 
       <div class="item">
         <div class="header">
           <h1>{{ info.project }}</h1>
-          <p>{{ info.description.slice(0, 90) }}</p>
+          <p>{{ info.description}}</p>
 
 
         </div>
@@ -28,7 +30,7 @@ const props = defineProps(['info'])
       </div>
 
 
-    </div>
+    </UIWrapper>
 
 
   </div>
@@ -38,29 +40,7 @@ const props = defineProps(['info'])
 <style scoped>
 
 
-/*.wrap {
-  box-shadow: 0px 5px 16px -7px rgb(107, 107, 107);
-  -webkit-box-shadow: 0px 5px 16px -7px rgb(58, 58, 58);
-  -moz-box-shadow: 0px 5px 16px -7px rgba(0,0,0,1);
-  width: 48rem;
-  border: solid rgba(106, 106, 106, 0.10) 1px;
-  padding: 0 1.5rem;
-  border-radius: 5px;
-  margin:1rem auto;
-  background-color: rgba(255, 255, 255, 0.09);
 
-}*/
-
-.wrap {
-
-  width: 48rem;
-
-
-  border-radius: 5px;
-  margin: 2.5rem auto;
-
-  border-bottom: solid rgba(106, 106, 106, 0.9) 1px;
-}
 
 
 .education {
@@ -100,7 +80,7 @@ const props = defineProps(['info'])
 }
 
 .item .header {
-  width: 18rem;
+  width: 24rem;
 
   margin-right: 1rem;
 
@@ -108,6 +88,7 @@ const props = defineProps(['info'])
 }
 
 .item .info {
+
   margin: 0 auto;
   align-content: flex-end;
   align-items: flex-end;
@@ -147,5 +128,11 @@ color: #cacaca;
   }
 }
 
+.wrap:hover{
+  background-color: rgba(148, 148, 148, 0.18);
+  border: none;
+  transition: 200ms linear ;
+  color: #02d5fa;
+}
 
 </style>
