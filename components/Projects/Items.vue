@@ -10,7 +10,7 @@ const props = defineProps(['info'])
 
 
 
-    <UIWrapper class="education-wrapper wrap ">
+    <UIWrapper class="education-wrapper">
 
       <div class="item">
         <div class="header">

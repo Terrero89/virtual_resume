@@ -7,7 +7,7 @@ const props = defineProps(['items'])
 
 <template>
 <div>
-  <div class="tech" v-for="tech in items">
+  <div class="tech" v-for="tech in items" :key="tech">
     <span class="tech-item">{{tech}}</span>
   </div>
 </div>
@@ -37,7 +37,7 @@ const props = defineProps(['items'])
 }
 
 .tech .tech-item:hover{
-  transform: scale(5);
+  transform: scale(1.5);
 
 
   /*  color:   #02d5fa}*/
@@ -46,6 +46,9 @@ const props = defineProps(['items'])
 
 .tech-item :hover{
   transform: scale(1.5);
+
+
+  /*  color:   #02d5fa}*/
   color: #4998a5;
 }
 </style>
