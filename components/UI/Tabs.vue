@@ -1,16 +1,21 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, watch } from "vue";
 const props = defineProps(["tabList"]);
 const activeTab = ref(0);
+const direction = ref('slide-right');
 
 const activateTab = (index) => {
+  // Determine the direction of the slide
+  direction.value = index > activeTab.value ? 'slide-left' : 'slide-right';
   activeTab.value = activeTab.value === index ? null : index;
 };
 
-let isFalse = ref(false);
-
-
+// Watch for changes in activeTab to apply the correct direction
+watch(activeTab, (newVal, oldVal) => {
+  direction.value = newVal > oldVal ? 'slide-left' : 'slide-right';
+});
 </script>
+
 <template>
   <div class="tabs-container">
     <div class="tab-size">
@@ -24,33 +29,35 @@ let isFalse = ref(false);
     </div>
 
     <div class="content">
-      <div v-if="activeTab !== null">
-        <div v-if="tabList[activeTab].label === 'Education'" class="education-content">
-          <EducationItems :info="tabList[activeTab].content" />
-        </div>
-        <div v-else class="cool">
-          <div v-for="(item, i) in tabList[activeTab].content" :key="i" class="item">
-            <ProjectsItems v-if="tabList[activeTab].label === 'Projects'" :info="item" />
-            <ExperienceItems v-else-if="tabList[activeTab].label === 'Experience'" :info="item" />
-            <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item" />
+      <transition :name="direction" mode="out-in">
+        <div v-if="activeTab !== null" :key="activeTab">
+          <div v-if="tabList[activeTab].label === 'Education'" class="education-content">
+            <EducationItems :info="tabList[activeTab].content" />
+          </div>
+          <div v-else class="cool">
+            <div v-for="(item, i) in tabList[activeTab].content" :key="i" class="item">
+              <ProjectsItems v-if="tabList[activeTab].label === 'Projects'" :info="item" />
+              <ExperienceItems v-else-if="tabList[activeTab].label === 'Experience'" :info="item" />
+              <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item" />
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
-<style scoped>
 
-.tab h1{
+<style scoped>
+.tab h1 {
   text-transform: uppercase;
   font-size: 0.8em;
-  font-weight:700;
+  font-weight: 700;
 }
 
 .tabs-container {
   width: 100%;
-
 }
+
 .tab-size {
   border-radius: 2px;
   display: flex;
@@ -71,13 +78,11 @@ let isFalse = ref(false);
 }
 
 .content {
-
   margin: 2rem auto;
   max-width: 48rem;
-
   align-items: center;
-
-  /* border: solid red 1px; */
+  overflow: hidden;
+  position: relative;
 }
 
 .tab {
@@ -98,7 +103,6 @@ let isFalse = ref(false);
 
 .tab.active {
   background-color: rgba(255, 255, 255, 0.2);
-
   border-radius: 5px;
   color: #02d5fa;
 }
@@ -106,10 +110,36 @@ let isFalse = ref(false);
 .tab-content {
   display: flex;
   flex-direction: column;
-
   margin: 1.5rem auto;
   height: 60vh;
   border-radius: 0 0 5px 5px;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.2s;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translate(50px, 0);
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translate(-50px, 0);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translate(-50px, 0);
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translate(50px, 0);
 }
 
 @media only screen and (max-width: 768px) {
