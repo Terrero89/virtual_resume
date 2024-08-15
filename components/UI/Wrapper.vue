@@ -22,10 +22,10 @@
 
 }
 
-.wrap:hover{
+/* .wrap:hover{
   background-color: rgba(148, 148, 148, 0.18);
   border: none;
   transition: 200ms linear;
-}
+} */
 
 </style>
