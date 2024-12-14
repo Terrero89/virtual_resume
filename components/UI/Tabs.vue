@@ -33,13 +33,25 @@ watch(activeTab, (newVal, oldVal) => {
         <div v-if="activeTab !== null" :key="activeTab">
           <div v-if="tabList[activeTab].label === 'Education'" class="education-content">
             <EducationItems :info="tabList[activeTab].content" />
+
           </div>
+
           <div v-else class="cool">
-            <div v-for="(item, i) in tabList[activeTab].content" :key="i" class="item">
-              <ProjectsItems v-if="tabList[activeTab].label === 'Projects'" :info="item" />
-              <ExperienceItems v-else-if="tabList[activeTab].label === 'Experience'" :info="item" />
-              <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item"/>
-            </div>
+            <NuxtLink>
+              <div  v-for="(item, i) in tabList[activeTab].content" :key="i" class="item"  >
+                <NuxtLink  v-if="tabList[activeTab].label === 'Projects'"  to="/about">
+                  <ProjectsItems :info="item" />
+                </NuxtLink>
+
+                <NuxtLink v-if="tabList[activeTab].label === 'Experience'" to="/experience">
+                  <ExperienceItems  :info="item"  />
+                </NuxtLink>
+
+                <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item"/>
+              </div>
+
+            </NuxtLink>
+
           </div>
         </div>
       </transition>

@@ -54,8 +54,9 @@ let info = ref({
     <div class="about-wrapper">
       <UIWrapper class="bio">
         <h1>About me</h1>
+        <h1>{{ props.info.sub }}</h1>
         <p>{{ props.info.text }}</p>
-        <p>{{ props.info.text }}</p>
+
       </UIWrapper>
 
       <UIWrapper class="bio">

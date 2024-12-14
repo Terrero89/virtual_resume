@@ -9,16 +9,9 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   <div class="education">
 
     <UIWrapper class="education-wrapper">
-
       <div class="item">
-
-
         <div class="header">
-
-
           <span>{{ info.dates }}</span>
-
-
         </div>
 
         <div class="info">
@@ -72,8 +65,6 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 
   display: inline-block;
 }
-
-
 
 
 .education {
