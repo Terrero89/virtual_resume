@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.15.0",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.14.1592",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "nuxt-aos": "^1.2.4",
+    "nuxt-aos": "^1.2.5",
     "nuxt-icon": "^0.6.10"
   }
 }

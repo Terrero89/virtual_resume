@@ -38,7 +38,7 @@ watch(activeTab, (newVal, oldVal) => {
             <div v-for="(item, i) in tabList[activeTab].content" :key="i" class="item">
               <ProjectsItems v-if="tabList[activeTab].label === 'Projects'" :info="item" />
               <ExperienceItems v-else-if="tabList[activeTab].label === 'Experience'" :info="item" />
-              <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item" />
+              <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item"/>
             </div>
           </div>
         </div>
