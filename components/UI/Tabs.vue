@@ -14,6 +14,10 @@ const activateTab = (index) => {
 watch(activeTab, (newVal, oldVal) => {
   direction.value = newVal > oldVal ? 'slide-left' : 'slide-right';
 });
+const isOpen = ref(false)
+const test = ref( ()=> console.log("TEST"))
+
+
 </script>
 
 <template>
@@ -39,13 +43,53 @@ watch(activeTab, (newVal, oldVal) => {
           <div v-else class="cool">
             <NuxtLink>
               <div  v-for="(item, i) in tabList[activeTab].content" :key="i" class="item"  >
-                <NuxtLink  v-if="tabList[activeTab].label === 'Projects'"  to="/about">
-                  <ProjectsItems :info="item" />
-                </NuxtLink>
 
-                <NuxtLink v-if="tabList[activeTab].label === 'Experience'" to="/experience">
+                <div  v-if="tabList[activeTab].label === 'Projects'" @click="isOpen = true">
+                  <ProjectsItems :info="item" />
+                  <div>
+
+
+                    <UModal v-model="isOpen">
+                      <div class="p-4">
+                        helloex
+                        <div v-for=" project in tabList[activeTab].content ">
+                          <div> {{project.id}}-</div>
+                          <div> {{project.project}}-</div>
+                          <div> {{project.link}}-</div>
+                          <div> {{project.technology}}-</div>
+                          <div> {{project.image}}-</div>
+                          <div> {{processText(project.intro)}}-</div>
+                          <div> {{processText(project.description)}}-</div>
+                        </div>
+                      </div>
+                    </UModal>
+                  </div>
+                </div>
+
+
+                <div @click="isOpen = true" v-if="tabList[activeTab].label === 'Experience'">
                   <ExperienceItems  :info="item"  />
-                </NuxtLink>
+                  <UModal v-model="isOpen" class="modal" >
+                    <div class="p-4 min-h " >
+                      helloex
+                      <div v-for=" experience in tabList[activeTab].content "   >
+                     <div> {{experience.id}}-</div>
+                        <div> {{experience .position}}-</div>
+                        <div> {{experience .dates}}-</div>
+                        <div> {{experience .city}}-</div>
+                        <div> {{experience .company}}-</div>
+                        <div> {{experience .description}}-</div>
+
+
+
+
+
+                      </div>
+                      <!--                        here goes the component with the details of the experience/project-->
+
+                    </div>
+                  </UModal>
+                </div>
 
                 <AboutItems v-else-if="tabList[activeTab].label=== 'About'" :info="item"/>
               </div>
@@ -60,6 +104,9 @@ watch(activeTab, (newVal, oldVal) => {
 </template>
 
 <style scoped>
+.modal{
+  width: 80rem; }
+
 .tab h1 {
   text-transform: uppercase;
   font-size: 0.8em;

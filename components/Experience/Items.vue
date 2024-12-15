@@ -2,6 +2,33 @@
 const props = defineProps(['info'])
 
 let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 256 256'%3E%3Cpath fill='white' d='M197.66 197.66a8 8 0 0 1-11.32 0L72 83.31V168a8 8 0 0 1-16 0V64a8 8 0 0 1 8-8h104a8 8 0 0 1 0 16H83.31l114.35 114.34a8 8 0 0 1 0 11.32'/%3E%3C/svg%3E")
+function processText(inputText) {
+  // Split the text into lines
+  const lines = inputText.split(/\r?\n/); // Handles both \n (Unix) and \r\n (Windows)
+
+  let intro = '';
+  let bulletPoints = [];
+
+  // Process each line
+  lines.forEach((line, index) => {
+    if (line.trim().startsWith('\n')) {
+      // If line starts with \n, treat it as a bullet point
+      bulletPoints.push(`• ${line.trim().substring(1).trim()}`); // Remove the leading \n and trim
+    } else {
+      // If it's the first line (no leading \n), consider it as the intro
+      if (index === 0) {
+        intro = line.trim();
+      } else {
+        bulletPoints.push(`• ${line.trim()}`); // For the rest, add as bullet points
+      }
+    }
+  });
+
+  // Combine intro and bullet points
+  return `${intro}\n${bulletPoints.join('\n')}`;
+}
+
+
 </script>
 
 
@@ -25,8 +52,10 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 
 
           </div>
+          <p>{{ info.intro }}</p>
 
-          <p>{{ info.description }}</p>
+          <p>{{processText( info.description )}}</p>
+
 
 
         </div>
@@ -99,8 +128,6 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
 .item {
 
   padding: 0.5rem
-
-
 }
 
 .item .header {
@@ -122,10 +149,7 @@ let icons = ref("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi
   height: 0.2rem;
 }
 
-.item .info {
-
-
-}
+.item .info {}
 
 .item h1 {
   display: inline-block;

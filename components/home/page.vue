@@ -2,6 +2,8 @@
 import {ref} from "vue";
 
 const props = defineProps(["info"]);
+const convertedText = ref(  `As part of the TMM team, I contributed to the development and maintenance of the two largest two-way messaging system apps in the department, focusing on delivering high-impact features and improvements across the codebase.\m\n  Increased Efficiency: Automated scripts that reduced developer and product owner workload by approximately 2 hours per request, streamlining workflows and eliminating repetitive manual tasks. This improvement saved an estimated 200+ hours per year based on request volume. +\nEnhanced Scalability: Upgraded CSV upload functionality to support multiple users and options, replacing a manual 2-hour process with an efficient automated solution. This increased throughput by over 50% while reducing error rates.\nImproved Code Quality: Researched and implemented an end-to-end automated testing suite using Jest and other testing tools, which reduced testing time by 40%, shortened development cycles, and elevated app quality. This initiative led to fewer bugs in production and enhanced the customer experience. \nFostered Cross-Functional Collaboration: Worked with engineers across teams to plan, brainstorm, and develop features, resulting in the successful delivery of features within the estimated timeline. This collaborative approach improved development efficiency and ensured alignment with business goals.`,
+)
 
 const tabs = ref([
   {
@@ -85,11 +87,11 @@ const tabs = ref([
           "MongoDB, " +
           "AWS," +
           "Typescript",
-            "NextJS",
+          "NextJS",
         ],
-        description:
-            "One of the more than 120 people selected into 2023 Hack.Diversity Fellowship, a career leadership and workforce\n" +
-            "development program integrating Boston’s innovation, corporate, civic, academic, and philanthropic pillars.",
+        intro:  "As part of the TMM team, I contributed to the development and maintenance of the two largest two-way messaging system apps in the department, focusing on delivering high-impact features and improvements across the codebase. " ,
+        bullet: ["Increased Efficiency: Automated scripts that reduced developer and product owner workload by approximately 2 hours per request, streamlining workflows and eliminating repetitive manual tasks. This improvement saved an estimated 200+ hours per year based on request volume." ,"Enhanced Scalability: Upgraded CSV upload functionality to support multiple users and options, replacing a manual 2-hour process with an efficient automated solution. This increased throughput by over 50% while reducing error rates.", "Enhanced Scalability: Upgraded CSV upload functionality to support multiple users and options, replacing a manual 2-hour process with an efficient automated solution. This increased throughput by over 50% while reducing error rates.", "Enhanced Scalability: Upgraded CSV upload functionality to support multiple users and options, replacing a manual 2-hour process with an efficient automated solution. This increased throughput by over 50% while reducing error rates.\nImproved Code Quality: Researched and implemented an end-to-end automated testing suite using Jest and other testing tools, which reduced testing time by 40%, shortened development cycles, and elevated app quality. This initiative led to fewer bugs in production and enhanced the customer experience. \nFostered Cross-Functional Collaboration: Worked with engineers across teams to plan, brainstorm, and develop features, resulting in the successful delivery of features within the estimated timeline. This collaborative approach improved development efficiency and ensured alignment with business goals.",],
+        description: "",
       },
       {
         id: "w02",
