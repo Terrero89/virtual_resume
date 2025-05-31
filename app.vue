@@ -11,7 +11,7 @@ const tabs = ref([
       {
         header: "About me",
         sub: "Part of my story",
-        text: "I am a dynamic and results-oriented individual with 5+ years of experience in the healthcare industry transitioning to software development. Passionate about technology with a focus on delivering creative quantitative solutions. Seeking a role where I can learn and grow in the industry while adding value to a dynamic team.",
+        text: "Currently, I'm a Software Engineer Liberty Mutual Insurance working within a microservices architecture. Over the past year, I've contributed to both backend and frontend systems using technologies like TypeScript, Java, Node.js, and AWS. My work focuses on building scalable, performant services and user-facing features, with an emphasis on modular design, reliability, and delivering seamless experiences across the stack.",
         techStack: [
           "Html",
           "Css",
@@ -190,16 +190,42 @@ const tabs = ref([
     ],
   },
 ]);
+
+
+
+const isLoading = ref(false)
+
+//  onMounted(()=> {
+//     document.onreadystatechange = () => {
+     
+//       if (document.readyState == "complete") {
+//         setTimeout(() => {
+//         isLoading.value = false;
+      
+//         }, 4000);
+//       }
+//     };
+//     isLoading.value = true;
+//   },
+// ) 
 </script>
 
 <template>
   <div>
-    <UContainer class="main-container">
+    <!-- <UContainer class="main-container" >
+  
+    
       <div class="main-wrapper">
         <UIHeader />
         <UITabs :tabList="tabs" />
+      </div> 
+
+        
+    </UContainer> -->
+       <UIUnderConstruction/>
+       <div class="main-wrapper">
+
       </div>
-    </UContainer>
   </div>
 </template>
 
